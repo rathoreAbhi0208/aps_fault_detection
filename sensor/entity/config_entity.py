@@ -6,6 +6,9 @@ from datetime import datetime
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
+TRANSFORMER_OBJECT_FILE_NAME = "transformer.pkl"
+TARGET_ENCODER_OBJECT_FILE_NAME = "target_encoder.pkl"
+MODEL_FILE_NAME = "model.pkl"
 
 
 class TrainingPipelineConfig:
@@ -51,7 +54,15 @@ class DataValidationConfig:
         self.base_file_path = os.path.join("/config/workspace/aps_failure_training_set1.csv")
 
         
-class DataTransformationConfig:...
+class DataTransformationConfig:
+
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.data_transformation_dir = os.path.join(training_pipeline_config.artifact_dir,"data_transformation")
+        self.transform_object_path = os.path.jopin(self.data_transformation_dir,"transformer",TRANSFORMER_OBJECT_FILE_NAME)
+        self.transformed_train_path = os.path.join(self.data_transformation_dir,"transfored",TRAIN_FILE_NAME)
+        self.transformed_test_path = os.path.join(self.data_transformation_dir,"transfored",TEST_FILE_NAME)
+        self.label_encoder_path = os.path.join(self.data_transformation_dir,"target_encoder",TARGET_ENCODER_OBJECT_FILE_NAME)
+        
 class DtaTrainerConfig:...
 class DataEvaluationConfig:...
 class ModelPusherConfig:...
