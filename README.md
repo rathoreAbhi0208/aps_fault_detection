@@ -26,3 +26,11 @@ wget https://raw.githubusercontent.com/avnyadav/sensor-fault-detection/main/aps_
 ```
 
 This Change is made in neuroLab
+
+
+.env file has
+```
+MONGO_DB_URL ="mongodb://localhost:27017"
+AWS_ACCESS_KEY_ID = 'aashgdjfhj'
+AWS_SECRET_ACCESS_KEY = 'addcds'
+```

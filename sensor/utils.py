@@ -76,7 +76,7 @@ def load_object(file_path:str,)  ->object:
     except Exception as e:
         raise SensorException(e, sys) from e
 
-def save_numpy_array_dict(fike_path:str,array:np.array):
+def save_numpy_array_data(file_path:str,array:np.array):
     """
     Save numpy array data to file
     file_path: str location of file to save
