@@ -40,3 +40,12 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu  
 newgrp docker
 ```
+```
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=ap-south-1
+AWS_ECR_LOGIN_URI=
+ECR_REPOSITORY_NAME=
+BUCKET_NAME=
+MONGO_DB_URL=
+```
